@@ -32,7 +32,7 @@ const SignUp = () => {
              <div className="container">
             <form className="card-panel sign-up-form" onSubmit={handleSubmit}>
                 <h5 className="center-align">Register</h5>
-               {error && <p style={{borderRadius:"3px", padding: '8px 5px', marginBottom: "0px"}} className="red darken-1 center-align white-text">Passwords don't match</p>} 
+               {error && <p style={{borderRadius:"3px", padding: '5px', marginBottom: "0px"}} className="red darken-1 center-align white-text">Passwords don't match</p>} 
                 <div className="input-field">
                 <input id="email" type="email" className="validate" placeholder="Email"  required ref={emailRef} />
                 </div>
