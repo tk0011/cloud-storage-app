@@ -82,7 +82,11 @@ const SignIn = () => {
               <div className="input-field">
                 <input id="password" type="password" className="validate"  placeholder="Password" ref={passRef} required/>
               </div>
-              <button disabled={loading} className="waves-effect waves-light btn grey darken-4"> Login</button>
+             <div className="submit-here"> 
+                 <button disabled={loading} className="waves-effect waves-light btn grey darken-4">{loading ? 'Logging in..' : 'LOGIN'}</button>
+                 <Link to='/resetPassword' style={{float: 'right'}}><i>Forgot password ? </i></Link>
+            </div>
+
               <p>Not a member yet? <Link to="/register">Register Now</Link></p>
           </form>
      </motion.div>

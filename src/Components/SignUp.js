@@ -118,7 +118,7 @@ const SignUp = () => {
                          <div className="input-field">
                         <input id="password" type="password" className="validate" placeholder="Confirm Password" required ref={confirmPassRef}/>
                         </div>
-                        <button disabled={loading} className="waves-effect waves-light btn grey darken-4"> Sign Up</button>
+                        <button disabled={loading} className="waves-effect waves-light btn grey darken-4"> {loading ? 'loading...' : 'SIGN UP'}</button>
                         <p>Already a member? <Link to="/login"> Login </Link> </p>
                     </form> 
               </motion.div>

@@ -7,6 +7,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  li {
+    color: #fff;
+  }
+} */
+
 code {
   font-family: "Open Sans", sans-serif;
 }
@@ -24,11 +42,22 @@ code {
   border-radius: 5px;
 }
 
-.sign-up-form button {
-  width: 50%;
-  margin: 25px auto 20px 0;
+.sign-up-form > div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.sign-up-form .submit-here i {
+  font-size: 12px;
+}
+
+.sign-up-form .submit-here button {
+  min-width: 135px;
+}
+
+.sign-up-form .submit-here a {
   display: block;
-  padding: 0px 0 10px 0;
+  margin-top: 5px;
 }
 
 .sign-up-form a {
