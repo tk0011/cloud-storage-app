@@ -1,9 +1,10 @@
 import {Route, Switch} from 'react-router-dom'
-import Dashboard from './Components/Dashboard';
-import ForgotPass from './Components/ForgotPass';
-import PrivateRoute from './Components/PrivateRoute';
-import SignIn from "./Components/SignIn";
-import SignUp from './Components/SignUp';
+import Profile from './Components/auth/Profile';
+import ForgotPass from './Components/auth/ForgotPass';
+import PrivateRoute from './Components/auth/PrivateRoute';
+import SignIn from "./Components/auth/SignIn";
+import SignUp from './Components/auth/SignUp';
+import UpdateProfile from './Components/auth/UpdateProfile';
 import {AuthProvider} from './Contexts/AuthContext'
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
     <>
     <AuthProvider>
         <Switch >
-        <PrivateRoute exact path="/" component={Dashboard} />
+        <PrivateRoute exact path="/profile" component={Profile} />
          <Route exact path="/login">
             <SignIn/>
          </Route>
@@ -21,6 +22,9 @@ function App() {
          </Route>
          <Route exact path="/resetPassword">
             <ForgotPass />
+         </Route>
+         <Route exact path="/updateProfile">
+            <UpdateProfile/>
          </Route>
       </Switch>
     </AuthProvider>

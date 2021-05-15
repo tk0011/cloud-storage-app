@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react'
 import {motion} from 'framer-motion'
-import {useAuth} from '../Contexts/AuthContext'
+import {useAuth} from '../../Contexts/AuthContext'
 import {Link} from 'react-router-dom';
 
 
@@ -66,9 +66,9 @@ const ForgotPass = () => {
             {msg && <p style={{borderRadius:"3px", padding: '5px', marginBottom: "0px"}} className="green lighten-2 center-align white-text">{msg}</p>}
            <form className=" sign-up-form" onSubmit={handleSubmit}>
               <div className="input-field">
-                <input id="email" type="email" className="validate" placeholder="Email"  ref={emailRef}  required/>
+                <input id="email" type="email" className="validate" placeholder="Enter registered email"  ref={emailRef}  required/>
               </div>
-              <button disabled={loading} className="waves-effect waves-light btn grey darken-4"> {loading ? 'Sending..' :'SEND'}</button>
+              <button disabled={loading} className="waves-effect waves-light btn grey darken-4"> {loading ? 'Sharing..' :'Share Reset Link'}</button>
               <p> <Link style={{marginRight:"15px"}} to="/register">Register</Link> <Link to="/login">Login</Link></p>
           </form>
      </motion.div>

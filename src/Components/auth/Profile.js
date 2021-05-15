@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
-import {useAuth } from '../Contexts/AuthContext'
-import {useHistory} from 'react-router-dom'
+import {useAuth } from '../../Contexts/AuthContext'
+import {useHistory, Link} from 'react-router-dom'
 
-const Dashboard = () => {
+const Profile = () => {
 
     const {currentUser , logout} = useAuth()
+    console.log(currentUser)
     const [error, setError] = useState('')
     const history = useHistory()
 
@@ -12,7 +13,7 @@ const Dashboard = () => {
             setError('')
             try {
                 await logout()
-                history.push('/')
+                history.push('/login')
             } catch (error) {
                 setError('Something went wrong')
             }
@@ -21,10 +22,11 @@ const Dashboard = () => {
     return (
         <div className="card-panel">
             {error && <p>{error}</p>}
-           <p> Welcome to dashboard {currentUser.email}</p>
+           <p> Welcome to dashboard {currentUser.displayName || currentUser.email}</p>
+            <Link to='/updateProfile'>Update profile</Link>
             <button onClick={handleClick}>Logout</button>
         </div>
     )
 }
 
-export default Dashboard
+export default Profile

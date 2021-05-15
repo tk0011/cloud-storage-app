@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react';
 import {Link , useHistory} from 'react-router-dom';
-import {useAuth} from '../Contexts/AuthContext'
+import {useAuth} from '../../Contexts/AuthContext'
 import { motion } from 'framer-motion';
 
 const SignIn = () => {

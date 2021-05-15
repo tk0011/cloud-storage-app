@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap");
 
 body {
   margin: 0;
@@ -25,7 +26,23 @@ body {
   }
 } */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
 code {
+  font-family: "Open Sans", sans-serif;
+}
+
+input,
+input::placeholder,
+button {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -33,7 +50,8 @@ code {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  margin-top: 50px;
+  min-height: 100vh;
+  margin: auto;
 }
 
 .form-wrap {

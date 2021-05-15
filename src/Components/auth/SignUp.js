@@ -1,6 +1,6 @@
 import React , {useRef , useState} from 'react'
 import {Link, useHistory} from 'react-router-dom'
-import {useAuth} from '../Contexts/AuthContext'
+import {useAuth} from '../../Contexts/AuthContext'
 import {motion} from 'framer-motion'
 
 const SignUp = () => {
@@ -15,6 +15,7 @@ const SignUp = () => {
 
     const handleSubmit = async(e) => {
      e.preventDefault();
+     
 
     if(passRef.current.value !== confirmPassRef.current.value ) {
       return  setError('Passwords dont match')
@@ -118,7 +119,7 @@ const SignUp = () => {
                          <div className="input-field">
                         <input id="password" type="password" className="validate" placeholder="Confirm Password" required ref={confirmPassRef}/>
                         </div>
-                        <button disabled={loading} className="waves-effect waves-light btn grey darken-4"> {loading ? 'loading...' : 'SIGN UP'}</button>
+                        <button disabled={loading} className="waves-effect waves-light btn grey darken-4"> {loading ? 'Signing up...' : 'SIGN UP'}</button>
                         <p>Already a member? <Link to="/login"> Login </Link> </p>
                     </form> 
               </motion.div>
