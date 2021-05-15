@@ -33,10 +33,10 @@ const SignIn = () => {
     <div className="container">
  
        <div className="auth-wrap">
-            <motion.div initial={{ x: -200, opacity: 0 }}
+            <motion.div initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: 200, opacity: 0 }}
-                    transition={{ duration: 0.5 }}
+                    exit={{ x: 100, opacity: 0 }}
+                    transition={{ duration: 0.6 }}
                     className="bg_score">
            <svg width="500" height="472" viewBox="0 0 634 472" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M423.888 364.123C457.427 368.213 486.202 388.896 509.883 391.729C536.201 394.878 576.004 377.586 616.593 397.938C627.04 403.177 635.618 409.472 632.422 417.296C626.852 430.931 615.13 436.273 589.453 439.978L586.714 440.357C566.864 442.997 545.53 443.636 491.447 443.993L472.967 444.133C407.04 444.707 368.915 447.794 319.545 451.738L314.512 452.146C223.598 459.627 151.028 458.428 96.8028 450.136L95.1652 449.882C51.355 443.02 25.0155 431.669 12.158 418.79C4.58881 411.209 0.22876 404.14 0.00372314 396.584C-0.221313 389.028 10.9423 380.722 17.2982 377.586C35.0035 368.85 40.7806 365.682 74.8188 361.209C89.4744 359.283 111.431 359.437 136.811 358.58C227.858 355.506 368.512 357.371 423.888 364.123Z" fill="white"/>
@@ -67,10 +67,10 @@ const SignIn = () => {
                   </svg>
     </motion.div>
 
-     <motion.div initial={{ x: 200, opacity: 0 }}
+     <motion.div initial={{ x: 100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: 200, opacity: 0 }}
-                    transition={{ duration: 0.5 }}
+                    exit={{ x: 100, opacity: 0 }}
+                    transition={{ duration: 0.6 }}
                     className="form-wrap">
            <h5>Sign In</h5>
             {error && <p style={{borderRadius:"3px", padding: '5px', marginBottom: "0px"}} className="red darken-1 center-align white-text">{error}</p>}

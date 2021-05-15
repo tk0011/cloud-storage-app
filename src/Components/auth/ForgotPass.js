@@ -34,10 +34,10 @@ const ForgotPass = () => {
     <div className="container">
  
        <div className="auth-wrap">
-            <motion.div initial={{ x: -200, opacity: 0 }}
+            <motion.div initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: 200, opacity: 0 }}
-                    transition={{ duration: 0.5 }}
+                    exit={{ x: 100, opacity: 0 }}
+                    transition={{ duration: 0.6 }}
                     className="bg_score">
           <svg width="450" height="350" viewBox="0 0 638 391" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M159.256 363.031C68.4858 384.191 16.5522 354.647 3.45513 274.4C-16.1904 154.03 50.3598 27.5725 141.673 15.45C232.987 3.3276 271.374 37.9072 335.553 81.3308C399.732 124.755 585.747 226.927 606.88 244.267C628.014 261.608 673.232 329.368 582.788 372.289C522.492 400.903 447.482 395.514 357.758 356.122C326.217 342.332 297.494 335.034 271.589 334.229C245.685 333.423 208.24 343.024 159.256 363.031Z" fill="#FFB61D" fill-opacity="0.75"/>
@@ -56,10 +56,10 @@ const ForgotPass = () => {
                 </svg>
              </motion.div>
 
-     <motion.div initial={{ x: 200, opacity: 0 }}
+     <motion.div initial={{ x: 100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: 200, opacity: 0 }}
-                    transition={{ duration: 0.5 }}
+                    exit={{ x: 100, opacity: 0 }}
+                    transition={{ duration: 0.6 }}
                     className="form-wrap">
            <h5>Reset Password</h5>
             {error && <p style={{borderRadius:"3px", padding: '5px', marginBottom: "0px"}} className="red darken-1 center-align white-text">{error}</p>}

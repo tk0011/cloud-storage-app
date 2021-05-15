@@ -46,12 +46,30 @@ button {
   font-family: "Open Sans", sans-serif;
 }
 
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+nav {
+  background: #444;
+  color: #fff;
+}
+
+.brand-logo i {
+  color: #ffb61d;
+  font-size: 36px !important;
+}
+
 .auth-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  min-height: 100vh;
-  margin: auto;
+  min-height: 80vh;
+  margin: 50px auto 0 auto;
+  max-width: 1100px;
 }
 
 .form-wrap {
@@ -80,4 +98,42 @@ button {
 
 .sign-up-form a {
   color: #ffb61d;
+}
+
+#mobile-demo {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #mobile-demo {
+    display: block !important;
+  }
+  .brand-logo {
+    left: 10% !important;
+  }
+
+  .togller {
+    float: right;
+  }
+
+  #mobile-toggle {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+
+  #mobile-toggle.show {
+    background: #555;
+    display: block !important;
+    position: absolute;
+    right: 0;
+    margin-top: 56px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #mobile-toggle.show ul {
+    display: flex;
+    flex-direction: column;
+  }
 }

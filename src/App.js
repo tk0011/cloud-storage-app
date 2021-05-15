@@ -6,12 +6,14 @@ import SignIn from "./Components/auth/SignIn";
 import SignUp from './Components/auth/SignUp';
 import UpdateProfile from './Components/auth/UpdateProfile';
 import {AuthProvider} from './Contexts/AuthContext'
+import Header from './Components/Header';
 
 function App() {
 
   return (
     <>
     <AuthProvider>
+       <Header />
         <Switch >
         <PrivateRoute exact path="/profile" component={Profile} />
          <Route exact path="/login">
