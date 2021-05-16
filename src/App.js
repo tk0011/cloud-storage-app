@@ -6,15 +6,15 @@ import SignIn from "./Components/auth/SignIn";
 import SignUp from './Components/auth/SignUp';
 import UpdateProfile from './Components/auth/UpdateProfile';
 import {AuthProvider} from './Contexts/AuthContext'
-import Header from './Components/Header';
+import Dashboard from './Components/Dashboard';
 
 function App() {
 
   return (
     <>
     <AuthProvider>
-       <Header />
         <Switch >
+        <Route exact path="/" component={Dashboard} /> 
         <PrivateRoute exact path="/profile" component={Profile} />
          <Route exact path="/login">
             <SignIn/>
